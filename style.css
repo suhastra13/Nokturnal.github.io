@@ -1,0 +1,646 @@
+/* ================================================== */
+/* FILE STYLE.CSS - VERSI LENGKAP         */
+/* ================================================== */
+
+
+/* --- A. Persiapan Dasar & Impor Font --- */
+
+/* Impor font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* CSS Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Menambah efek scroll halus untuk seluruh halaman */
+}
+
+/* Gaya dasar untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #333; /* Warna teks utama */
+    line-height: 1.6;
+}
+
+/* --- B. Mendesain Header dan Navigasi --- */
+
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Putih semi-transparan */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed; /* Tetap di atas saat scroll */
+    width: 100%;
+    top: 0;
+    z-index: 100; /* Pastikan header selalu di lapisan paling atas */
+    backdrop-filter: blur(5px); /* Efek blur untuk background transparan */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, menu di kanan */
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto; /* Center nav di layar lebar */
+    padding: 1rem 2rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #1A237E; /* Biru Tua */
+}
+
+.nav-links {
+    list-style: none; /* Hilangkan bullet points */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF6F00; /* Oranye saat hover */
+}
+
+/* Gaya khusus untuk tombol navigasi */
+.nav-cta {
+    background-color: #df7f11;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-cta:hover {
+    background-color: #fff;
+    color: #fff;
+}
+
+
+/* --- C. Mendesain Hero Section --- */
+
+.hero {
+    background: 
+        linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.8)),
+        url(https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFwdG9wLHJlcGFpcnx8fHx8fDE3MTgxMDkyMDY&ixlib=rb-4.0.3&q=80&w=1080) 
+        no-repeat center center/cover;
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Gaya untuk Tombol CTA Utama */
+.cta-button {
+    background-color: #FF6F00; /* Warna aksen Oranye */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- D. CSS UNTUK FITUR & LAYANAN (BAGIAN YANG HILANG) --- */
+
+/* Gaya Umum untuk Section */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem; /* Memberi jarak atas-bawah yang lega */
+}
+
+/* Judul Section - DIPERBAIKI */
+.section-title {
+    text-align: center; /* Memastikan semua judul section di tengah */
+    font-size: 2.8rem;  /* Ukuran diperbesar sedikit */
+    font-weight: 700;   /* Ditebalkan */
+    margin-bottom: 4rem;
+    color: #1A237E;
+}
+
+/* Gaya Bagian Keunggulan (Features) */
+.features {
+    background-color: #f4f7f9;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1A237E;
+}
+
+/* Gaya Bagian Layanan (Services) */
+.services {
+    background-color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #f4f7f9;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #1A237E;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left-color: #FF6F00;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1A237E;
+}
+
+
+/* --- E. CSS UNTUK KALKULATOR --- */
+.calculator {
+    background-color: #1A237E;
+    color: #fff;
+}
+
+/* Mengatur agar judul di section kalkulator berwarna putih */
+.calculator .section-title {
+    color: #fff;
+}
+
+.calculator-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group select {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-result {
+    margin-top: 3rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.price-result p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#estimated-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FDD835;
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.contact {
+    background-color: #f4f7f9; /* Warna abu-abu muda */
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: -3rem auto 4rem; /* Margin negatif untuk mendekatkan ke judul */
+    font-size: 1.1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Membuat konten terdistribusi rapi */
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    color: #1A237E;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin-bottom: 2rem;
+}
+
+.contact-button, .contact-info {
+    display: inline-block;
+    background-color: #fff;
+    color: #1A237E;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #1A237E;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1A237E;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.contact-info {
+    background-color: transparent;
+    border-color: #ddd;
+    color: #555;
+}
+
+
+/* --- Gaya Footer --- */
+
+footer {
+    background-color: #1A237E;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Tambahkan kode ini di style.css */
+
+/* --- Penyesuaian untuk Logo --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo svg {
+    color: #FF6F00;
+}
+
+/* ====== CSS UNTUK FITUR TAMBAHAN ====== */
+
+/* --- Gaya Bagian Proses Kerja --- */
+.process {
+    background-color: #f4f7f9;
+}
+body.dark-mode .process {
+    background-color: var(--bg-dark);
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.process-step {
+    text-align: center;
+}
+.process-number {
+    width: 60px;
+    height: 60px;
+    background-color: #1A237E;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 4px #1A237E;
+}
+body.dark-mode .process-number {
+    background-color: #4C82F7;
+    border-color: var(--card-dark);
+    box-shadow: 0 0 0 4px #4C82F7;
+}
+.process-step h3 {
+    font-size: 1.5rem;
+    color: #1A237E;
+    margin-bottom: 0.5rem;
+}
+body.dark-mode .process-step h3 {
+    color: #4C82F7;
+}
+
+/* --- Membuat Kartu Layanan bisa di-klik --- */
+.service-card {
+    cursor: pointer; /* Mengubah kursor menjadi tangan */
+}
+
+/* --- Gaya Tombol Kembali ke Atas --- */
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1A237E;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0; /* Sembunyi secara default */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+.back-to-top-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top-button:hover {
+    background-color: #FF6F00;
+    transform: translateY(-5px);
+}
+body.dark-mode .back-to-top-button {
+    background-color: #4C82F7;
+}
+
+/* ====== CSS UNTUK FITUR DARK MODE ====== */
+
+/* --- Gaya Tombol Dark Mode --- */
+.theme-toggle-button {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.theme-toggle-button:hover {
+    border-color: #1A237E;
+}
+/* Ikon matahari dan bulan dibuat dengan pseudo-element CSS */
+.theme-toggle-button::before, .theme-toggle-button::after {
+    content: '';
+    position: absolute;
+    transition: transform 0.5s ease;
+    font-size: 1.2rem;
+}
+.theme-toggle-button::before { /* Ikon Matahari */
+    content: '☀️';
+    transform: translateY(100%);
+}
+.theme-toggle-button::after { /* Ikon Bulan */
+    content: '🌙';
+    transform: translateY(0);
+}
+/* Style saat dark mode aktif */
+body.dark-mode .theme-toggle-button::before {
+    transform: translateY(0);
+}
+body.dark-mode .theme-toggle-button::after {
+    transform: translateY(-100%);
+}
+
+
+/* --- Variabel Warna untuk Dark Mode --- */
+:root {
+    --bg-light: #f4f7f9;
+    --bg-dark: #121212;
+    --text-light: #333;
+    --text-dark: #eee;
+    --card-light: #fff;
+    --card-dark: #1e1e1e;
+    --primary-color: #1A237E;
+    --primary-color-dark: #4C82F7;
+}
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+body.dark-mode header {
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+body.dark-mode .logo h1, body.dark-mode .nav-links a {
+    color: var(--text-dark);
+}
+body.dark-mode .features, 
+body.dark-mode .services, 
+body.dark-mode .process,
+body.dark-mode .contact {
+    background-color: var(--bg-dark);
+}
+body.dark-mode .feature-card, 
+body.dark-mode .service-card, 
+body.dark-mode .contact-card {
+    background-color: var(--card-dark);
+    box-shadow: none;
+    border: 1px solid #333;
+}
+body.dark-mode .section-title, 
+body.dark-mode .feature-card h3, 
+body.dark-mode .service-card h3, 
+body.dark-mode .process-step h3,
+body.dark-mode .contact-card h3 {
+    color: var(--primary-color-dark);
+}
+body.dark-mode .process-number {
+    background-color: var(--primary-color-dark);
+    border-color: var(--card-dark);
+    box-shadow: 0 0 0 4px var(--primary-color-dark);
+}
+body.dark-mode .service-card {
+    border-left-color: var(--primary-color-dark);
+}
+body.dark-mode .service-card:hover {
+    border-left-color: #FF6F00;
+}
+body.dark-mode .calculator {
+    background-color: var(--primary-color);
+}
+body.dark-mode .back-to-top-button {
+    background-color: var(--primary-color-dark);
+}
+
+/* ====== CSS UNTUK FITUR FAQ (PERBAIKAN) ====== */
+
+.faq {
+    background-color: #fff; /* Memberi latar belakang putih bersih */
+}
+body.dark-mode .faq {
+    background-color: var(--bg-dark); /* Latar belakang gelap saat dark mode */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0; /* Garis pemisah atas */
+}
+body.dark-mode .faq-container {
+    border-top-color: #333;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0; /* Garis pemisah antar pertanyaan */
+}
+body.dark-mode .faq-item {
+    border-bottom-color: #333;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #1A237E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+body.dark-mode .faq-question {
+    color: var(--primary-color-dark);
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9; /* Efek hover agar lebih interaktif */
+}
+body.dark-mode .faq-question:hover {
+    background-color: var(--card-dark);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0; /* Jawaban tersembunyi secara default */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 1rem;
+    color: #555; /* Warna teks jawaban yang sedikit lebih soft */
+}
+body.dark-mode .faq-answer {
+    color: #ccc;
+}
+.faq-answer p {
+    padding-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Style saat FAQ aktif/terbuka */
+.faq-item.active .faq-question {
+    color: #FF6F00; /* Warna pertanyaan berubah saat aktif */
+}
+body.dark-mode .faq-item.active .faq-question {
+    color: #FF6F00;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Ikon '+' berubah menjadi 'x' */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Atur tinggi maksimal jawaban saat terbuka */
+}
